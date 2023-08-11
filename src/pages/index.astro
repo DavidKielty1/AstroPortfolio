@@ -1,9 +1,47 @@
 ---
-import MainLayout from '../layouts/main-layout.astro';
+import MainLayout from "../layouts/main-layout.astro";
 ---
 
-<MainLayout title="David Kielty">
-	<main>
-			<h1 class="">Hello World</h1>
-	</main>
+<MainLayout title="David Kielty" class="w-full">
+  <main class="flex justify-center py-20 bg-slate-200/20">
+    <div class="flex justify-center w-full max-w-7xl gap-40 text-slate-600">
+      <div class="w-7/12 flex flex-col gap-10">
+        <h1 class="font-raleway text-4xl font-bold">
+          Hello! I'm David, a developer based in the United Kingdom
+        </h1>
+        <p class="font-montserrat text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque
+          quos, sunt ea eius harum ratione sapiente quia debitis. Dolorum neque
+          a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque
+          quos, sunt ea eius harum ratione sapiente quia debitis. Dolorum neque
+          a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque
+          quos, sunt ea eius harum ratione sapiente quia debitis. Dolorum neque
+          a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
+        </p>
+        <div class="text-xl flex gap-10 font-worksans">
+          <button
+            class="bg-slate-200/5 border-slate-600 border-content border-2 text-slate-600 rounded-md py-2 px-8 hover:border-slate-200/10 hover:border-box hover:bg-slate-600 hover:text-white"
+            >View LinkedIn</button
+          >
+          <button
+            class="bg-slate-600 text-white rounded-md py-2 px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:border-box hover:bg-slate-200/20 hover:text-black"
+            >View Github</button
+          >
+          <button></button>
+        </div>
+      </div>
+
+      <div class="w-5/12">
+        <input
+          class="w-full rounded-full"
+          type="image"
+          src="../../public/images/Profile Pic 3.jpg"
+          alt=""
+          size="fill"
+        />
+      </div>
+    </div>
+  </main>
 </MainLayout>
