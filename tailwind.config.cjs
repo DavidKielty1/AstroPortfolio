@@ -5,6 +5,7 @@ module.exports = {
     "./pages/**/*.{astro,html,js,jsx,ts,tsx}",
     "./components/**/*.{astro,html,js,jsx,ts,tsx}",
     "./app/**/*.{astro,html,js,jsx,ts,tsx}",
+    "./src/components/Nav.tsx",
   ],
   theme: {
     fontFamily: {
@@ -13,12 +14,13 @@ module.exports = {
       montserrat: ["Montserrat", "sans-serif"],
     },
     screens: {
+      xs: "300px",
       sm: "570px",
       md: "640px",
       lg: "750px",
       xl: "1024px",
-      "2xl": "2560px",
-      "3xl": "1536px",
+      "2xl": "1280px",
+      "3xl": "1640px",
     },
   },
 };

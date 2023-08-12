@@ -1,0 +1,48 @@
+---
+import { parse } from "node-html-parser";
+
+interface Props {
+  id: string;
+  class?: string;
+  config?: Record<string, any>;
+}
+
+const { id, class: className, config = {} } = Astro.props;
+
+const rawHtmlSlides = await Astro.slots.render("default");
+const slides = Array.from(parse(rawHtmlSlides).querySelectorAll("> *"));
+---
+
+<div class:list={["splide", className]} id={id}>
+  <div>
+    <ul>
+      {slides.map((slide) => <li class="splide_slide">{slide}</li>)}
+    </ul>
+  </div>
+</div>
+
+<link
+  href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+  rel="stylesheet"
+/>
+
+<style is:global>
+  .splide .splide_pagination {
+    bottom: -36px;
+  }
+</style>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.js"
+></script>
+
+<script
+  define:vars={{ id, config }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide(`#${id}` config);
+  splide.mount();
+  });
+</script>
