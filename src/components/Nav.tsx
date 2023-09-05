@@ -11,7 +11,7 @@ export default function Nav() {
 
   return (
     <nav className=" flex justify-center bg-slate-200/20 w-screen ">
-      <div className="flex justify-between w-screen lg:mx-20 xl:mx-32 max-w-[1280px]  py-4 mx-10 3xl:mx-0 tracking-wide text-2xl font-worksans font-medium">
+      <div className="flex justify-between w-screen lg:mx-20 xl:mx-32 max-w-[1000px]  py-4 mx-10 3xl:mx-0 tracking-wide text-2xl font-worksans font-medium">
         <div className="text-start">
           <h1 className="">DAVID KIELTY</h1>
         </div>
