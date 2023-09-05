@@ -1,5 +1,8 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
+import Carousel from '../components/Carousel.astro'
+import CarouselItem from '../components/CarouselItem.astro'
+import Card from '../components/Card.astro'
 ---
 
 <MainLayout title="David Kielty">
@@ -27,14 +30,14 @@ import MainLayout from "../layouts/main-layout.astro";
           a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
         </p>
         <div
-          class="text-xl flex gap-5 xl:gap-10 font-worksans mx-4 xl:mx-0 justify-center xl:justify-start flex-col xs:flex-row"
+          class="text-xl flex-1 flex gap-0 xl:gap-10 font-worksans justify-center xl:justify-start flex-col xs:flex-row"
         >
           <button
-            class="bg-slate-200/5 border-slate-600 border-2 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-52 xl:max-w-72"
+            class="bg-slate-200/5  mr-3 flex flex-1 border-slate-600 border-2 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-52 xl:max-w-72"
             >View LinkedIn</button
           >
           <button
-            class="bg-slate-600 text-white rounded-md border-2 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-52 xl:max-w-72"
+            class="bg-slate-600 text-white flex-1 rounded-md border-2 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-52 xl:max-w-72"
             >View Github</button
           >
           <button></button>
@@ -54,9 +57,25 @@ import MainLayout from "../layouts/main-layout.astro";
       </div>
     </div>
   </main>
-  <section
-    class="h-screen flex justify-center bg-blue-200/20 text-slate-600 py-10"
-  >
-    <div><h2 class="font-raleway text-5xl font-bold">Projects</h2></div>
+  <section class="flex justify-center bg-slate-200/30 text-slate-600 mx-4 py-4">
+    <div class="flex flex-col align-center h-full">
+      <h2 class="text-center font-raleway text-5xl font-bold">Projects</h2>
+      <div class="max-w-xs my-16 max-h-full">
+        <Carousel id="carousel">
+            <CarouselItem>
+              <Card href="https://meetups-t3.vercel.app/" title="Unite" body="Can I have a hobby with a side of friends, please?" tech="Technologies utilzed: NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, Zod, tRPC, CI/CD" imagesrc="../../public/images/meetupMain.png"/>
+            </CarouselItem>
+            <CarouselItem>
+              <Card href="https://pandareview.onrender.com/" title="Panda Review" body="Share your favourite oriental hot-spot diners!" tech="Technologies utilzed: Javascript, MongoDB, Mongoose, Express, Node, Sessions" imagesrc="../../public/images/panda.png"/>
+            </CarouselItem>
+            <CarouselItem>
+              <Card href="https://exquisite-souffle-cb2d07.netlify.app/" title="Scrumptious" body="Search for delicious recipes from all over the world!" tech="Technologies utilzed: React, FetchAPI, Styled Components, Carousel" imagesrc="../../public/images/Girlchef.png"/>
+            </CarouselItem>
+            <CarouselItem>
+              <Card href="https://foodapp-624be.firebaseapp.com/" title="Gusto Restaurant" body="Michelin Star quality delivered to your home." tech="Technologies utilzed:  React, Firebase, ContextAPI, SASS" imagesrc="../../public/images/gusto.png"/>
+            </CarouselItem>
+        </Carousel>
+      </div>
+    </div>
   </section>
 </MainLayout>

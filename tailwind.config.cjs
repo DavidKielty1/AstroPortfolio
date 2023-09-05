@@ -23,4 +23,9 @@ module.exports = {
       "3xl": "1640px",
     },
   },
+  variants: {
+    extend: {
+      display: ["group-hover"],
+    },
+  },
 };
