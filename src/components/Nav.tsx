@@ -56,11 +56,6 @@ export default function Nav() {
                       aria-controls="sidebar"
                       className="justify-center  text-3xl py-4 hover:bg-slate-300/20 w-full font-raleway"
                     >
-                      {/* <img
-                        className=""
-                        src="images/icon-close-menu.svg"
-                        alt="Close Menu"
-                      /> */}
                       X
                     </button>
                   </div>
@@ -121,58 +116,39 @@ export default function Nav() {
               </Transition.Child>
             </Transition>
           </div>
-          {/* <div> */}
-          {/* <div className="align-end z-10 flex items-end justify-end xl:hidden">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 cursor-pointer"
-                onClick={() => {
-                  document
-                    .getElementById("mobilemenu")
-                    ?.classList.toggle("hidden");
-                }}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-              <div className="flex w-full items-center justify-center group-active:visible">
-                <div
-                  id="mobilemenu"
-                  className="text-bold absolute left-0 top-16 hidden w-screen flex-col bg-slate-300/30 bg-opacity-95 py-2 text-center text-2xl font-bold text-slate-600 backdrop-blur-md"
-                >
-                  <a
-                    href="/"
-                    className="block w-full py-6 hover:bg-slate-400/40 hover:text-white "
-                  >
-                    About
-                  </a>
-                  <a
-                    href="/"
-                    className="block w-full py-6 hover:bg-slate-400/40 hover:text-white "
-                  >
-                    Projects
-                  </a>
-                  <a
-                    href="/NewMeetUp"
-                    className="block w-full py-6 hover:bg-slate-400/40 hover:text-white "
-                  >
-                    Contact
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* </div> */}
         </div>
       </div>
     </nav>
   );
 }
+
+export const DUMMY_DATA = [
+  {
+    url: "https://meetups-t3.vercel.app/",
+    title: "Unite",
+    description: "Can I have a hobby with a side of friends, please?",
+    tech: "Technologies utilzed: NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, Zod, tRPC, CI/CD",
+    imagesrc: "../../public/images/meetupMain.png",
+  },
+  {
+    url: "https://pandareview.onrender.com/",
+    title: "Panda Review",
+    description: "Share your favourite oriental hot-spot diners!",
+    tech: "Technologies utilzed: Javascript, MongoDB, Mongoose, Express, Node, Sessions",
+    imagesrc: "../../public/images/panda.png",
+  },
+  {
+    url: "https://exquisite-souffle-cb2d07.netlify.app/",
+    title: "Scrumptious",
+    description: "Search for delicious recipes from all over the world!",
+    tech: "Technologies utilzed: React, FetchAPI, Styled Components, Carousel",
+    imagesrc: "../../public/images/Girlchef.png",
+  },
+  {
+    url: "https://foodapp-624be.firebaseapp.com/",
+    title: "Gusto Restaurant",
+    description: "Michelin Star quality delivered to your home.",
+    tech: "Technologies utilzed:  React, Firebase, ContextAPI, SASS",
+    imagesrc: "../../public/images/Chefhat.png",
+  },
+];

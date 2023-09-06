@@ -3,6 +3,7 @@ import MainLayout from "../layouts/main-layout.astro";
 import Carousel from '../components/Carousel.astro'
 import CarouselItem from '../components/CarouselItem.astro'
 import Card from '../components/Card.astro'
+import { DUMMY_DATA } from "../components/Nav";
 ---
 
 <MainLayout title="David Kielty">
@@ -49,9 +50,9 @@ import Card from '../components/Card.astro'
       </div>
     </div>
   </main>
-  <section class="flex justify-center bg-slate-200/30 text-slate-600 px-4 py-4 ">
+  <section class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4  ">
     <div class="flex flex-col items-center h-full ">
-      <h2 class="text-center font-raleway text-5xl font-bold">Projects</h2>
+      <h2 class="text-center font-raleway text-5xl font-bold pb-14 ">Projects</h2>
       <div class="max-w-xs my-16 max-h-full block sm:hidden">
         <Carousel id="carousel">
             <CarouselItem>
@@ -68,7 +69,30 @@ import Card from '../components/Card.astro'
             </CarouselItem>
         </Carousel>
       </div>
-      <div class="lg:block hidden">Hello World Over 900px</div>
+      <ul class="sm:flex flex-col gap-10 mx-4 hidden">
+        {DUMMY_DATA.map((project) => (
+          <article class="flex-1 text-xl text-center bg-white font-montserrat py-16 rounded-lg shadow-2xl">
+            <a href={project.url} class="flex flex-col h-[500px]">
+              <div class="group flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px]">
+                <h2 class="text-3xl font-bold uppercase tracking-widest">
+                  {project.title}
+                </h2>
+                <p class="group-hover:hidden align-center text-center text-2xl">
+                {project.description}
+                </p>
+                <p class="hidden group-hover:block text-2xl">
+                  {project.tech}
+                </p>
+              </div>
+                <img
+                  class="flex-1 self-center w-72 aspect-square"
+                  src={project.imagesrc}
+                  alt=""
+                />
+            </a>
+          </article>
+        ))}
+      </ul>
     </div>
   </section>
 </MainLayout>
