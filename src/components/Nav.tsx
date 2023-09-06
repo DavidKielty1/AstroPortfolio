@@ -10,15 +10,15 @@ export default function Nav() {
   }
 
   return (
-    <nav className=" flex justify-center bg-slate-200/20 w-screen ">
+    <nav className=" flex justify-center bg-slate-200/20 text-slate-600/80 w-screen fixed">
       <div className="flex justify-between w-screen 2xl:max-w-screen-3xl py-4 mx-10 tracking-wide text-3xl font-worksans font-medium">
         <div className="text-start">
-          <h1 className="">DAVID KIELTY</h1>
+          <a href="#home">DAVID KIELTY</a>
         </div>
         <div className="justify-end gap-4 hidden xl:flex">
-          <a href="/about">About</a>
-          <a href="/projects">Projects</a>
-          <a href="/contact">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
         </div>
         <div className="flex items-center xl:hidden">
           <button
@@ -59,38 +59,44 @@ export default function Nav() {
                       X
                     </button>
                   </div>
-
                   <ul className="flex flex-col  font-worksans justify-center">
+                    <li className="py-4 w-full hover:bg-slate-300/20 justify-center flex">
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="text-center font-medium flex items-center  hover:text-slate-200">
+                              <a href="#home" className="text-2xl ">
+                                Home
+                              </a>
+                            </Disclosure.Button>
+                          </>
+                        )}
+                      </Disclosure>
+                    </li>
+                    <li className="py-4 w-full hover:bg-slate-300/20 justify-center flex">
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="text-center font-medium flex items-center  hover:text-slate-200">
+                              <a href="#projects" className="text-2xl ">
+                                Projects
+                              </a>
+                            </Disclosure.Button>
+                          </>
+                        )}
+                      </Disclosure>
+                    </li>
                     <li className="py-4 w-full hover:bg-slate-300/20 flex justify-center">
                       <Disclosure>
                         {({ open }) => (
                           <>
                             <Disclosure.Button className="text-center flex items-center  hover:text-slate-200">
-                              <span className="font-medium text-2xl ">
+                              <a
+                                href="#about"
+                                className="font-medium text-2xl "
+                              >
                                 About
-                              </span>
-                            </Disclosure.Button>
-                          </>
-                        )}
-                      </Disclosure>
-                    </li>
-                    <li className="py-4 w-full hover:bg-slate-300/20 justify-center flex">
-                      <Disclosure>
-                        {({ open }) => (
-                          <>
-                            <Disclosure.Button className="text-center font-medium flex items-center  hover:text-slate-200">
-                              <span className="text-2xl ">Projects</span>
-                            </Disclosure.Button>
-                          </>
-                        )}
-                      </Disclosure>
-                    </li>
-                    <li className="py-4 w-full hover:bg-slate-300/20 justify-center flex">
-                      <Disclosure>
-                        {({ open }) => (
-                          <>
-                            <Disclosure.Button className="text-center font-medium flex items-center  hover:text-slate-200">
-                              <span className="text-2xl ">Contact</span>
+                              </a>
                             </Disclosure.Button>
                           </>
                         )}

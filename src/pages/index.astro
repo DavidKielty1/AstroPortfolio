@@ -7,8 +7,8 @@ import { DUMMY_DATA } from "../components/Nav";
 ---
 
 <MainLayout title="David Kielty">
-  <main
-    class="flex justify-center py-10 xl:py-52 bg-slate-200/20 text-slate-600"
+  <main id="home"
+    class="flex justify-center py-28 xl:py-52 bg-slate-200/20 text-slate-600"
   >
     <div
       class="flex justify-center flex-col lg:flex-row w-full max-w-screen-3xl text-center lg:text-left gap-10 lg:mx-10 xl:mx-20 sm:mx-16"
@@ -50,9 +50,9 @@ import { DUMMY_DATA } from "../components/Nav";
       </div>
     </div>
   </main>
-  <section class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4">
+  <section id="projects" class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4">
     <div class="flex flex-col items-center h-full ">
-      <h2 class="text-center font-raleway text-5xl font-bold pb-14 ">Projects</h2>
+      <h2 class="text-center font-raleway text-5xl font-bold py-48 ">Projects</h2>
       <div class="max-w-xs my-16 max-h-full block sm:hidden">
         <Carousel id="carousel">
             <CarouselItem>
@@ -97,19 +97,16 @@ import { DUMMY_DATA } from "../components/Nav";
       </ul>
     </div>
   </section>
-  <section class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4">
-    <div class="flex flex-col items-center h-full ">
-      <h2 class="text-center font-raleway text-5xl font-bold pb-14 pt-20">About Me</h2>
-    </div>
-  </section>
-  <section class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4">
-    <div class="flex flex-col items-center h-full ">
-      <h2 class="text-center font-raleway text-5xl font-bold pb-14 pt-20">About Us</h2>
-    </div>
-  </section>
-  <section class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4">
-    <div class="flex flex-col items-center h-full ">
-      <h2 class="text-center font-raleway text-5xl font-bold pb-14 pt-20">Contact me!</h2>
+  <section id="about" class="flex justify-center  bg-slate-200/20 text-slate-600 px-4 py-4">
+    <div class="flex flex-col items-center h-full w-9/12 self-center">
+      <h2 class="text-center font-raleway text-5xl font-bold py-48 ">About Me</h2>
+        <p class="font-montserrat text-2xl text-justify">I'm a dedicated software developer seeking opportunities at reputable companies. My passion lies in working with the latest tech on diverse projects and constantly expanding my skills through hands-on work and staying updated with modern methodologies.</p>
+        <br/>
+        <p class="font-montserrat text-2xl text-justify">I ensure robust development with TypeScript, utilizing Zod, tRPC, and type-safe ORMs such as Prisma while maintaining strict linting practices. My experience includes deploying to various platforms and working with databases such as PostgreSQL, Firebase, and MongoDB. I have also dabbled with setting up testing CI/CD pipelines using GitHub Actions, yaml and Docker.</p>
+        <br/>
+        <p class="font-montserrat text-2xl text-justify">My CSS skills encompass CSS modules, SCSS, SASS, styled components, and popular frameworks like Tailwind, DaisyUI, and BootstrapUI. In the world of React, I'm well-versed in hooks, context API, fetch API, react-query, and global state management (with Redux).</p>        
+        <br/>
+        <p class="font-montserrat text-2xl text-justify">I am looking forward to collaborating with your established team in an agile environment and learning from your knowledgable expertise</p>
     </div>
   </section>
 </MainLayout>
