@@ -7,37 +7,31 @@ import Card from '../components/Card.astro'
 
 <MainLayout title="David Kielty">
   <main
-    class="flex justify-center py-10 xl:py-20 bg-slate-200/20 text-slate-600"
+    class="flex justify-center py-10 xl:py-60 bg-slate-200/20 text-slate-600"
   >
     <div
-      class="flex justify-center flex-col xl:flex-row w-full max-w-7xl xl:gap-40 text-center xl:text-left gap-10"
+      class="flex justify-center flex-col lg:flex-row w-full max-w-screen-3xl text-center lg:text-left gap-10 lg:mx-10 xl:mx-20 sm:mx-16"
     >
       <div
-        class="xl:w-7/12 flex flex-col gap-10 mx-4 xl:mx-0 xl:ml-20 3xl:ml-0"
+        class="lg:w-7/12 3xl:w-8/12 flex flex-col gap-10 mx-8 lg:mx-0 "
       >
-        <h1 class="font-raleway text-4xl font-bold">
+        <h1 class="font-raleway text-5xl font-bold">
           Hello! I'm David, a developer based in the United Kingdom
         </h1>
-        <p class="font-montserrat text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque
-          quos, sunt ea eius harum ratione sapiente quia debitis. Dolorum neque
-          a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque
-          quos, sunt ea eius harum ratione sapiente quia debitis. Dolorum neque
-          a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum atque
-          quos, sunt ea eius harum ratione sapiente quia debitis. Dolorum neque
-          a ex impedit odit quibusdam asperiores consectetur cupiditate ab.
+        <p class="font-montserrat text-2xl text-justify">
+          <span>As a devoted enthusiast of learning and an aspiring full-stack technician, I am eager to contribute to the exciting world of software development. My commitment to constant growth and inventive thinking drives me to seek collaborative projects that push beyond the ordinary, yielding exceptional and ingenious solutions. </span>
+          <span class="hidden 3xl:block ">
+            Together, we can embark on a journey to create outstanding software that not only meets but exceeds expectations, leaving a lasting mark on the ever-evolving tech landscape.</span>
         </p>
         <div
-          class="text-xl flex-1 flex gap-0 xl:gap-10 font-worksans justify-center xl:justify-start flex-col xs:flex-row"
+          class="text-xl flex font-worksans justify-center xl:justify-start flex-col xs:flex-row"
         >
           <button
-            class="bg-slate-200/5  mr-3 flex flex-1 border-slate-600 border-2 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-52 xl:max-w-72"
+            class="bg-slate-200/5 mr-1 flex-1 border-slate-600 border-2 lg:max-h-20 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-screen-1btn"
             >View LinkedIn</button
           >
           <button
-            class="bg-slate-600 text-white flex-1 rounded-md border-2 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-52 xl:max-w-72"
+            class="bg-slate-600 ml-1 text-white flex-1 rounded-md border-2 lg:max-h-20 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-screen-1btn"
             >View Github</button
           >
           <button></button>
@@ -45,14 +39,12 @@ import Card from '../components/Card.astro'
       </div>
 
       <div
-        class="xl:w-5/12 sm:mx-20 md:mx-40 lg:mx-60 xl:mt-20 2xl:mt-0 mx-10 xl:mx-0 xl:mr-20 3xl:mr-0"
+        class="lg:w-5/12 3xl:w-4/12 xs:mx-10 sm:mx-30 md:mx-40 lg:mx-0 2xl:mt-0 mx-10 xl:mx-0 flex justify-center lg:justify-end items-center"
       >
-        <input
-          class="w-full rounded-full"
-          type="image"
+        <img
+          class="w-100% rounded-full max-h-[500px] 2xl:min-h-[600px] md:min-w-[360px] max-w-screen-2xl:min-w-[440px]"
           src="../../public/images/Profile Pic 3.jpg"
           alt=""
-          size="fill"
         />
       </div>
     </div>
@@ -60,7 +52,7 @@ import Card from '../components/Card.astro'
   <section class="flex justify-center bg-slate-200/30 text-slate-600 px-4 py-4 ">
     <div class="flex flex-col items-center h-full ">
       <h2 class="text-center font-raleway text-5xl font-bold">Projects</h2>
-      <div class="w-8/12 my-16 max-h-full block lg:hidden">
+      <div class="max-w-xs my-16 max-h-full block sm:hidden">
         <Carousel id="carousel">
             <CarouselItem>
               <Card href="https://meetups-t3.vercel.app/" title="Unite" body="Can I have a hobby with a side of friends, please?" tech="Technologies utilzed: NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, Zod, tRPC, CI/CD" imagesrc="../../public/images/meetupMain.png"/>
