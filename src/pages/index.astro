@@ -8,7 +8,7 @@ import { DUMMY_DATA } from "../components/Nav";
 
 <MainLayout title="David Kielty">
   <main
-    class="flex justify-center py-10 xl:py-60 bg-slate-200/20 text-slate-600"
+    class="flex justify-center py-10 xl:py-52 bg-slate-200/20 text-slate-600"
   >
     <div
       class="flex justify-center flex-col lg:flex-row w-full max-w-screen-3xl text-center lg:text-left gap-10 lg:mx-10 xl:mx-20 sm:mx-16"
@@ -69,20 +69,22 @@ import { DUMMY_DATA } from "../components/Nav";
             </CarouselItem>
         </Carousel>
       </div>
-      <ul class="sm:flex flex-col gap-10 mx-4 hidden">
+      <ul class="sm:flex flex-col gap-10 mx-4 hidden xl:flex-row flex-wrap justify-center max-w-screen-3xl">
         {DUMMY_DATA.map((project) => (
-          <article class="flex-1 text-xl text-center bg-white font-montserrat py-16 rounded-lg shadow-2xl">
-            <a href={project.url} class="flex flex-col h-[500px]">
-              <div class="group flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px]">
+          <article class="px-10 text-xl group text-center bg-white font-montserrat py-16 rounded-lg shadow-2xl xl:w-[550px]">
+            <a href={project.url} class=" flex flex-col h-[500px]">
+              <div class=" flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px]">
                 <h2 class="text-3xl font-bold uppercase tracking-widest">
                   {project.title}
                 </h2>
-                <p class="group-hover:hidden align-center text-center text-2xl">
-                {project.description}
-                </p>
-                <p class="hidden group-hover:block text-2xl">
-                  {project.tech}
-                </p>
+                <div class="relative w-100%">   
+                  <p class="absolute group-hover:hidden align-center text-center text-2xl">
+                    {project.description}
+                  </p>
+                  <p class="absolute hidden group-hover:block text-2xl">
+                    {project.tech}
+                  </p>
+                </div>
               </div>
                 <img
                   class="flex-1 self-center w-72 aspect-square"
