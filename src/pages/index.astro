@@ -71,8 +71,7 @@ ag.show();
       >
         <img
           class="w-100% rounded-full max-h-[500px] 2xl:min-h-[600px] md:min-w-[360px] max-w-screen-2xl:min-w-[440px]"
-          src="../../public/images/Profile Pic 3.jpg"
-          alt=""
+          src="/images/Profile Pic 3.jpg"
         />
       </div>
     </div>
@@ -83,16 +82,16 @@ ag.show();
       <div class="max-w-xs my-16 max-h-full block sm:hidden">
         <Carousel id="carousel">
             <CarouselItem>
-              <Card href="https://meetups-t3.vercel.app/" title="Unite" body="Can I have a hobby with a side of friends, please?" tech="Technologies utilzed: NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, Zod, tRPC, CI/CD" imagesrc="../../public/images/meetupMain.png"/>
+              <Card href="https://meetups-t3.vercel.app/" title="Unite" body="Can I have a hobby with a side of friends, please?" tech="Technologies utilzed: NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, Zod, tRPC, CI/CD" imagesrc="/images/meetupMain.png"/>
             </CarouselItem>
             <CarouselItem>
-              <Card href="https://pandareview.onrender.com/" title="Panda Review" body="Share your favourite oriental hot-spot diners!" tech="Technologies utilzed: Javascript, MongoDB, Mongoose, Express, Node, Sessions" imagesrc="../../public/images/panda.png"/>
+              <Card href="https://pandareview.onrender.com/" title="Panda Review" body="Share your favourite oriental hot-spot diners!" tech="Technologies utilzed: Javascript, MongoDB, Mongoose, Express, Node, Sessions" imagesrc="/images/panda.png"/>
             </CarouselItem>
             <CarouselItem>
-              <Card href="https://exquisite-souffle-cb2d07.netlify.app/" title="Scrumptious" body="Search for delicious recipes from all over the world!" tech="Technologies utilzed: React, FetchAPI, Styled Components, Carousel" imagesrc="../../public/images/Girlchef.png"/>
+              <Card href="https://exquisite-souffle-cb2d07.netlify.app/" title="Scrumptious" body="Search for delicious recipes from all over the world!" tech="Technologies utilzed: React, FetchAPI, Styled Components, Carousel" imagesrc="/images/Girlchef.png"/>
             </CarouselItem>
             <CarouselItem>
-              <Card href="https://foodapp-624be.firebaseapp.com/" title="Gusto Restaurant" body="Michelin Star quality delivered to your home." tech="Technologies utilzed:  React, Firebase, ContextAPI, SASS" imagesrc="../../public/images/gusto.png"/>
+              <Card href="https://foodapp-624be.firebaseapp.com/" title="Gusto Restaurant" body="Michelin Star quality delivered to your home." tech="Technologies utilzed:  React, Firebase, ContextAPI, SASS" imagesrc="/images/gusto.png"/>
             </CarouselItem>
         </Carousel>
       </div>
@@ -116,7 +115,7 @@ ag.show();
                 <img
                   class="flex-1 self-center w-72 aspect-square"
                   src={project.imagesrc}
-                  alt=""
+                  loading="lazy"
                 />
             </a>
           </article>
