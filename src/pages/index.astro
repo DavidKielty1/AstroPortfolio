@@ -7,7 +7,7 @@ import RoughAnnotation from '../components/RoughAnnotation'
 // import RoughNotationText from "../components/RoughNotationText";
 import { DUMMY_DATA, RoughNotationText } from "../components/Nav";
 ---
-<script is:inline>
+<script >
 import { annotate, annotationGroup } from 'rough-notation';
 const developer = document.querySelector('#developer');
 const devoted = document.querySelector('#devoted');
@@ -19,17 +19,17 @@ const together = document.querySelector('#together');
 const embark = document.querySelector('#embark');
 const everEvolving = document.querySelector('#ever-evolving');
 const hireme = document.querySelector('#hireme');
-const annotation1 = annotate(developer, { type: 'highlight', color: '#99f6e4', animationDuration: 1500 } );
-const annotation2 = annotate(devoted, { type: 'highlight', color: '#fed7aa', animationDuration: 500, iterations: 1 } );
-const annotation3 = annotate(learning, { type: 'highlight', color: '#fde68a', animationDuration: 500, iterations: 1 } );
-const annotation4 = annotate(fullStack, { type: 'highlight', color: '#bbf7d0', animationDuration: 500, rtl: true } );
-const annotation5 = annotate(collaborativeProjects, { type: 'highlight', color: '#fecaca', animationDuration: 500, iterations: 3, rtl: true, } );
-const annotation6 = annotate(solutions, { type: 'highlight', color: '#a5f3fc', animationDuration: 500, iterations: 1 } );
-const annotation7 = annotate(together, { type: 'highlight', color: '#bfdbfe', animationDuration: 500, iterations: 1 } );
-const annotation8 = annotate(embark, { type: 'highlight', color: '#e9d5ff', animationDuration: 500, iterations: 1, rtl: true } );
-const annotation9 = annotate(everEvolving, { type: 'highlight', color: '#fbcfe8', animationDuration: 500, iterations: 1 } );
-const annotation10 = annotate(hireme, { type: 'bracket', color: '#be123c', brackets: ['left', 'right'], padding: 10, strokeWidth: 6, animationDuration: 1500 } );
-const annotation11 = annotate(hireme, { type: 'highlight', color: '#fcd34d', animationDuration: 1500 } );
+const annotation1 = annotate(developer as HTMLElement, { type: 'highlight', color: '#99f6e4', animationDuration: 1500 } );
+const annotation2 = annotate(devoted as HTMLElement, { type: 'highlight', color: '#fed7aa', animationDuration: 500, iterations: 1 } );
+const annotation3 = annotate(learning as HTMLElement, { type: 'highlight', color: '#fde68a', animationDuration: 500, iterations: 1 } );
+const annotation4 = annotate(fullStack as HTMLElement, { type: 'highlight', color: '#bbf7d0', animationDuration: 500, rtl: true } );
+const annotation5 = annotate(collaborativeProjects as HTMLElement, { type: 'highlight', color: '#fecaca', animationDuration: 500, iterations: 3, rtl: true, } );
+const annotation6 = annotate(solutions as HTMLElement, { type: 'highlight', color: '#a5f3fc', animationDuration: 500, iterations: 1 } );
+const annotation7 = annotate(together as HTMLElement, { type: 'highlight', color: '#bfdbfe', animationDuration: 500, iterations: 1 } );
+const annotation8 = annotate(embark as HTMLElement, { type: 'highlight', color: '#e9d5ff', animationDuration: 500, iterations: 1, rtl: true } );
+const annotation9 = annotate(everEvolving as HTMLElement, { type: 'highlight', color: '#fbcfe8', animationDuration: 500, iterations: 1 } );
+const annotation10 = annotate(hireme as HTMLElement, { type: 'bracket', color: '#be123c', brackets: ['left', 'right'], padding: 10, strokeWidth: 6, animationDuration: 1500 } );
+const annotation11 = annotate(hireme as HTMLElement, { type: 'highlight', color: '#fcd34d', animationDuration: 1500 } );
 const ag = annotationGroup ([annotation1, annotation2, annotation3, annotation4, annotation5, annotation6, annotation7, annotation8, annotation9, annotation10, annotation11 ]);
 ag.show();
 </script>
