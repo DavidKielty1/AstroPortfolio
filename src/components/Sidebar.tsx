@@ -2,7 +2,13 @@ import { Disclosure, Transition } from "@headlessui/react";
 
 type SetOpen = React.Dispatch<React.SetStateAction<boolean>>;
 
-const Sidebar = ({ open = false, setOpen }) => {
+const Sidebar = ({
+  open = false,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: SetOpen;
+}) => {
   return (
     <>
       <Transition show={open}>

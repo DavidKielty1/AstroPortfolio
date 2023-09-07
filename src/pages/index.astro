@@ -5,24 +5,51 @@ import CarouselItem from '../components/CarouselItem.astro'
 import Card from '../components/Card.astro'
 import { DUMMY_DATA } from "../components/Nav";
 ---
+<script>
+import { annotate, annotationGroup } from 'rough-notation';
+const developer = document.querySelector('#developer');
+const devoted = document.querySelector('#devoted');
+const learning = document.querySelector('#learning');
+const fullStack = document.querySelector('#full-stack');
+const collaborativeProjects = document.querySelector('#collaborative-projects');
+const solutions = document.querySelector('#solutions');
+const together = document.querySelector('#together');
+const embark = document.querySelector('#embark');
+const everEvolving = document.querySelector('#ever-evolving');
+const hireme = document.querySelector('#hireme');
+const annotation1 = annotate(developer as HTMLElement, { type: 'highlight', color: '#99f6e4', animationDuration: 1500 } );
+const annotation2 = annotate(devoted as HTMLElement, { type: 'highlight', color: '#fed7aa', animationDuration: 500, iterations: 1 } );
+const annotation3 = annotate(learning as HTMLElement, { type: 'highlight', color: '#fde68a', animationDuration: 500, iterations: 1 } );
+const annotation4 = annotate(fullStack as HTMLElement, { type: 'highlight', color: '#bbf7d0', animationDuration: 500, rtl: true } );
+const annotation5 = annotate(collaborativeProjects as HTMLElement, { type: 'highlight', color: '#fecaca', animationDuration: 500, iterations: 3, rtl: true, } );
+const annotation6 = annotate(solutions as HTMLElement, { type: 'highlight', color: '#a5f3fc', animationDuration: 500, iterations: 1 } );
+const annotation7 = annotate(together as HTMLElement, { type: 'highlight', color: '#bfdbfe', animationDuration: 500, iterations: 1 } );
+const annotation8 = annotate(embark as HTMLElement, { type: 'highlight', color: '#e9d5ff', animationDuration: 500, iterations: 1, rtl: true } );
+const annotation9 = annotate(everEvolving as HTMLElement, { type: 'highlight', color: '#fbcfe8', animationDuration: 500, iterations: 1 } );
+const annotation10 = annotate(hireme as HTMLElement, { type: 'bracket', color: '#be123c', brackets: ['left', 'right'], padding: 10, strokeWidth: 6, animationDuration: 1500 } );
+const annotation11 = annotate(hireme as HTMLElement, { type: 'highlight', color: '#fcd34d', animationDuration: 1500 } );
+const ag = annotationGroup ([annotation1, annotation2, annotation3, annotation4, annotation5, annotation6, annotation7, annotation8, annotation9, annotation10, annotation11 ]);
+ag.show();
+</script>
 
 <MainLayout title="David Kielty">
-  <main id="home"
-    class="flex justify-center py-28 xl:py-52 bg-slate-200/20 text-slate-600"
+  <main id="home" 
+    class="flex justify-center py-28 xl:pt-52 pb-28 bg-slate-200/20 text-slate-600"
   >
-    <div
+    <div 
       class="flex justify-center flex-col lg:flex-row w-full max-w-screen-3xl text-center lg:text-left gap-10 lg:mx-10 xl:mx-20 sm:mx-16"
     >
-      <div
-        class="lg:w-7/12 3xl:w-8/12 flex flex-col gap-10 mx-8 lg:mx-0 "
+      <div 
+        class="lg:w-7/12 3xl:w-8/12 flex flex-col gap-10 mx-8 lg:mx-0"
       >
         <h1 class="font-raleway text-5xl font-bold">
-          Hello! I'm David, a developer based in the United Kingdom
+          Hello! I'm David, a <span id="developer">developer</span> based in the United Kingdom 
         </h1>
         <p class="font-montserrat text-2xl text-justify">
-          <span>As a devoted enthusiast of learning and an aspiring full-stack technician, I am eager to contribute to the exciting world of software development. My commitment to constant growth and inventive thinking drives me to seek collaborative projects that push beyond the ordinary, yielding exceptional and ingenious solutions. </span>
+          <span>As a <span id="devoted">devoted</span> enthusiast of <span id="learning">learning</span> and an aspiring <span id="full-stack">full-stack</span> technician, I am eager to contribute to the exciting world of software development. My commitment to constant growth and inventive thinking drives me to seek <span id="collaborative-projects">collaborative projects</span> that push beyond the ordinary, yielding exceptional and ingenious <span id="solutions">solutions</span>. </span>
           <span class="hidden 3xl:block ">
-            Together, we can embark on a journey to create outstanding software that not only meets but exceeds expectations, leaving a lasting mark on the ever-evolving tech landscape.</span>
+            <span id="together">Together</span>, we can <span id="embark">embark</span> on a journey to create outstanding software that not only meets but exceeds expectations, leaving a lasting mark on the <span id="ever-evolving">ever-evolving</span> tech landscape. Let's debug your team 
+            <span id="hireme">Hire me</span> !</span>
         </p>
         <div
           class="text-xl flex font-worksans justify-center xl:justify-start flex-col xs:flex-row"
@@ -52,7 +79,7 @@ import { DUMMY_DATA } from "../components/Nav";
   </main>
   <section id="projects" class="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4">
     <div class="flex flex-col items-center h-full ">
-      <h2 class="text-center font-raleway text-5xl font-bold py-48 ">Projects</h2>
+      <h2 class="text-center font-raleway text-5xl font-bold py-20 ">Projects</h2>
       <div class="max-w-xs my-16 max-h-full block sm:hidden">
         <Carousel id="carousel">
             <CarouselItem>
@@ -97,7 +124,7 @@ import { DUMMY_DATA } from "../components/Nav";
       </ul>
     </div>
   </section>
-  <section id="about" class="flex justify-center  bg-slate-200/20 text-slate-600 px-4 py-4">
+  <section id="about" class="flex justify-center  bg-slate-200/20 text-slate-600 px-4 pt-4 pb-28">
     <div class="flex flex-col items-center h-full w-9/12 self-center">
       <h2 class="text-center font-raleway text-5xl font-bold py-48 ">About Me</h2>
         <p class="font-montserrat text-2xl text-justify">I'm a dedicated software developer seeking opportunities at reputable companies. My passion lies in working with the latest tech on diverse projects and constantly expanding my skills through hands-on work and staying updated with modern methodologies.</p>
@@ -106,7 +133,7 @@ import { DUMMY_DATA } from "../components/Nav";
         <br/>
         <p class="font-montserrat text-2xl text-justify">My CSS skills encompass CSS modules, SCSS, SASS, styled components, and popular frameworks like Tailwind, DaisyUI, and BootstrapUI. In the world of React, I'm well-versed in hooks, context API, fetch API, react-query, and global state management (with Redux).</p>        
         <br/>
-        <p class="font-montserrat text-2xl text-justify">I am looking forward to collaborating with your established team in an agile environment and learning from your knowledgable expertise</p>
+        <p class="font-montserrat text-2xl text-justify">I am looking forward to collaborating with your established team in an agile environment and learning from your knowledgable expertise.</p>
     </div>
   </section>
 </MainLayout>
